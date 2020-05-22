@@ -15,6 +15,7 @@ import androidx.lifecycle.OnLifecycleEvent
  * ③ 接受事件是通过注解OnLifecycleEvent来完成的，参数即Event枚举
  * ④ LifecycleOwner：Lifecycle持有者。让Activity或者fragment实现该接口，当生命周期改变是事件会被LifecycleObserver接收到。
  */
+
 class MyObserver :LifecycleObserver {
     private val TAG: String
         get() = "MyObserver"
