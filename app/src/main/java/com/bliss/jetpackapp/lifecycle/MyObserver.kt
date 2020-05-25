@@ -13,7 +13,7 @@ import androidx.lifecycle.OnLifecycleEvent
  * ① LifecycleObserver: Lifecycle观察者。我们需要自定义类实现LifecycleObserver，通过注解的方式可观察生命周期方法。
  * ② Lifecycle: 生命周期抽象类。持有添加和移除监听方法。定义State和Event枚举。
  * ③ 接受事件是通过注解OnLifecycleEvent来完成的，参数即Event枚举
- * ④ LifecycleOwner：Lifecycle持有者。让Activity或者fragment实现该接口，当生命周期改变是事件会被LifecycleObserver接收到。
+ * ④ LifecycleOwner：Lifecycle持有者。让Activity或者fragment实现该接口，当生命周期改变时事件会被LifecycleObserver接收到。
  */
 
 class MyObserver :LifecycleObserver {
