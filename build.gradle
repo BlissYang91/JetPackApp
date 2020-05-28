@@ -1,7 +1,45 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.3.60'
+    ext {
+        // Sdk and tools
+        compileSdkVersion = 29
+        minSdkVersion = 19
+        targetSdkVersion = 29
+        buildToolsVersion = "29.0.3"
+
+        versionCode = 1
+        versionName = "1.0"
+
+        // App dependencies
+        applicationId = 'com.bliss.jetpackapp'
+        appCompatVersion = '1.1.0'
+        constraintLayoutVersion = '2.0.0-beta3'
+        coreTestingVersion = '2.0.0'
+        coroutinesVersion = "1.3.0-M2"
+        espressoVersion = '3.1.1'
+        fragmentVersion = '1.1.0-alpha09'
+        glideVersion = '4.10.0'
+        gradleVersion = '3.6.3'
+        gsonVersion = '2.8.2'
+        junitVersion = '4.12'
+        kotlinVersion = '1.3.72'
+        ktlintVersion = '0.33.0'
+        ktxVersion = '1.2.0'
+        lifecycleVersion = '2.2.0'
+        materialVersion = '1.1.0-alpha09'
+        navigationVersion = '2.2.0'
+        recyclerViewVersion = '1.1.0-alpha05'
+        roomVersion = '2.2.5'
+        runnerVersion = '1.0.1'
+        truthVersion = '0.42'
+        testExtJunit = '1.1.0'
+        uiAutomatorVersion = '2.2.0'
+        viewPagerVersion = '1.0.0'
+        workVersion = '2.1.0'
+    }
+
+    ext.kotlin_version = kotlinVersion
     repositories {
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
@@ -11,7 +49,7 @@ buildscript {
         
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.3'
+        classpath "com.android.tools.build:gradle:$gradleVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
